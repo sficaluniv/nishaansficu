@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>নিশান</title>
+
+<!-- Google Bengali Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Benguiat+Bengali&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+/* Default English Font */
+body{
+font-family:"Times New Roman", serif;
+background:#f5f5f5;
+}
+
+/* ===== TOP BAR ===== */
+.topbar{
+background:red;
+color:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 20px;
+}
+
+.logo{
+width:90px;
+}
+
+/* Hamburger Button */
+.menu-btn{
+font-size:26px;
+cursor:pointer;
+background:red;
+color:white;
+padding:6px 12px;
+border:2px solid white;
+border-radius:6px;
+}
+
+/* ===== SIDE MENU ===== */
+.sidemenu{
+height:100%;
+width:0;
+position:fixed;
+top:0;
+right:0;
+background:red;
+overflow-x:hidden;
+transition:0.4s;
+padding-top:60px;
+z-index:999;
+}
+
+.sidemenu a{
+display:block;
+color:white;
+padding:18px 25px;
+text-decoration:none;
+border-bottom:1px solid rgba(255,255,255,0.2);
+font-size:18px;
+font-family:"Times New Roman", serif; /* English */
+}
+
+.sidemenu a:hover{
+background:rgba(255,255,255,0.2);
+}
+
+.close-btn{
+position:absolute;
+top:10px;
+right:20px;
+font-size:35px;
+cursor:pointer;
+color:white;
+}
+
+/* ===== HERO ===== */
+.hero{
+text-align:center;
+padding:70px 20px;
+background:white;
+}
+
+/* Title in Benguiat Bengali */
+.bengali-title{
+font-family:'Benguiat Bengali', serif;
+color:red;
+font-size:60px;
+letter-spacing:4px;
+}
+
+/* Bengali Content Font (Hind Siliguri) */
+.bengali{
+font-family:'Hind Siliguri', sans-serif;
+color:red;
+line-height:1.8;
+font-size:20px;
+}
+
+/* English Subtitle */
+.hero h3{
+color:red;
+margin-bottom:15px;
+font-family:"Times New Roman", serif;
+}
+
+/* Footer */
+.footer{
+background:red;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+font-family:"Times New Roman", serif;
+}
+/* ===== STORIES ===== */
+
+.featured-slider{
+position:relative;
+width:100%;
+max-width:1000px;
+margin:30px auto;
+overflow:hidden;
+background:#fff;
+border-radius:12px;
+}
+
+.slides{
+position:relative;
+width:100%;
+height:500px;
+}
+
+.slide{
+display:none;
+position:absolute;
+width:100%;
+height:100%;
+text-decoration:none;
+}
+
+.slide.active{
+display:block;
+}
+
+.slide img{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+}
+
+.slide-overlay{
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+padding:20px;
+background:linear-gradient(transparent, rgba(0,0,0,0.8));
+color:white;
+}
+
+.story-tag{
+background:red;
+display:inline-block;
+padding:5px 10px;
+margin-bottom:10px;
+font-size:14px;
+}
+
+.slide-btn{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:rgba(0,0,0,0.5);
+color:white;
+border:none;
+font-size:30px;
+padding:10px;
+cursor:pointer;
+z-index:10;
+}
+
+.prev{
+left:10px;
+}
+
+.next{
+right:10px;
+}
+
+@media(max-width:768px){
+
+.bengali-title{
+font-size:42px;
+}
+
+.hero{
+padding:40px 15px;
+}
+
+.bengali{
+font-size:16px;
+}
+
+.slides{
+height:250px;
+}
+
+.slide-overlay h1{
+font-size:20px;
+}
+
+.slide-overlay p{
+font-size:14px;
+}
+
+.logo{
+width:90px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="topbar">
+    <img src="logo.png" class="logo">
+    <div class="menu-btn" onclick="document.getElementById('menu').style.width='80%'">
+☰
+</div>
+</div>
+
+<!-- SIDE MENU -->
+<div id="menu" class="sidemenu">
+    <div class="close-btn" onclick="document.getElementById('menu').style.width='0'">
+×
+</div>
+    <a href="index.html">Home</a>
+    <a href="about.html">About NISHAAN</a>
+    <a href="CU.html">ABOUT CALCUTTA UNIVERSITY LOCAL COMMITTEE</a>
+    <a href="LCP.html"> LOCAL COMMITTEE PROGRAMS</a>
+    <a href="Sudipto.html">Sudipto Shopothe - সুদীপ্ত সংগ্রাম</a>
+    <a href="manob.html">Dedication to Com. Manab Mukherjee</a>
+    <a href="#">AGENDAS</a>
+    <a href="RSS.html">Recent Success Stories</a>
+    <a href="#">What is to be done</a>
+    <a href="Campusunits.html">All Campus Units</a>
+    <a href="press.html"> Press Release And Deputations</a>
+    <a href="girl.html"> SFI Calcutta University Girls' Sub-Committee (বীণা দাস বাহিনী)</a>
+    <a href="girl.html"> SFI Calcutta University Hostel Sub-Committee</a>
+    <a href="#">SFI CU PHOTO GALLERY</a>
+    <a href="#">POSTER GALLERY</a>
+    <a href="#">CONTACT DETAILS</a>
+</div>
+
+<!-- HERO SECTION -->
+<div class="hero">
+
+    <!-- Title -->
+    <h1 class="bengali-title">নিশান</h1>
+
+    <!-- English Subtitle -->
+    <h3>Study & Struggle</h3>
+
+    <!-- Bengali Poem -->
+    <p class="bengali">
+    পড়তে শেখা, গড়তে শেখা, লড়তে শেখা কোন ভাষাতে?<br>
+    স্পর্ধা বাঁচে, সাহস বাঁচে, মানবদা'র সি. ইউ তে!
+    </p>
+</div>
+
+<!-- IMAGE SECTION -->
+<section class="featured-slider">
+
+<button class="slide-btn prev">&#10094;</button>
+
+<div class="slides">
+
+<!-- STORY 1 -->
+<a href="story1.html" class="slide active">
+
+<img src="queer1.jpg">
+
+<div class="slide-overlay">
+
+<div class="story-tag">
+Pages of Pride: Colour of Courage
+</div>
+
+<h1>
+Queer Themes in Bengali Literature: From Silence to Self-Expression
+</h1>
+
+<p>
+Ankan Kumar Paul
+</p>
+
+</div>
+
+</a>
+
+<!-- STORY 2 -->
+<a href="story2.html" class="slide">
+
+<img src="story2cover.jpg">
+
+<div class="slide-overlay">
+
+<div class="story-tag">
+Pages of Pride: Colours of Courage
+</div>
+
+<h1>
+ভালোবাসার মুক্তি, পরিচয়ের সংগ্রাম : ভারতীয় চলচ্চিত্রে প্রান্তিক লিঙ্গ
+</h1>
+
+<p>
+কৌশানী দে
+</p>
+
+</div>
+
+</a>
+
+<!-- STORY 3 -->
+<a href="story3.html" class="slide">
+
+<img src="story3cover.png">
+
+<div class="slide-overlay">
+
+<div class="story-tag">
+Pages of Pride: Colours of Courage
+</div>
+
+<h1>
+The Journey From Navtej Singh Johar Vs Union of India To The Contemporary LGBTQ+ Rights
+</h1>
+
+<p>
+Sayantika Chandra 
+</p>
+
+</div>
+
+</a>
+
+<!-- STORY 4 -->
+<a href="story4.html" class="slide">
+
+<img src="story4cover.png">
+
+<div class="slide-overlay">
+
+<div class="story-tag">
+Pages of Pride: Colours of Courage
+</div>
+
+<h1>
+Mental Health and the LGBTQ+ Community: Why Inclusive Language Matters — A Marxist Perspective
+</h1>
+
+<p>
+Sayan Talukdar 
+</p>
+
+</div>
+
+</a>
+
+<!-- STORY 5 -->
+<a href="story5.html" class="slide">
+
+<img src="story5cover.png">
+
+<div class="slide-overlay">
+
+<div class="story-tag">
+Pages of Pride: Colours of Courage
+</div>
+
+<h1>
+রামধনুর আড়ালে লুকিয়ে থাকা গল্পগুলো: বাংলা সাহিত্যে Queer পরিচয়ের সন্ধান
+</h1>
+
+<p>
+শ্রীজীতা ব্যানার্জী
+</p>
+
+</div>
+
+</a>
+
+<!-- STORY 6 -->
+<a href="story6.html" class="slide">
+
+<img src="story6cover.png">
+
+<div class="slide-overlay">
+
+<div class="story-tag">
+Pages of Pride: Colours of Courage
+</div>
+
+<h1>
+Beyond Blood: Identity, Family, and Acceptance in LGBTQ+ Lives
+</h1>
+
+<p>
+Gourab Mondal
+</p>
+
+</div>
+
+</a>
+
+<!-- STORY 7 -->
+<a href="story7.html" class="slide">
+
+<img src="story7cover.png">
+
+<div class="slide-overlay">
+
+<div class="story-tag">
+Pages of Pride: Colours of Courage
+</div>
+
+<h1>
+Family, Acceptance, and Identity: The Everyday Reality of Being Queer
+</h1>
+
+<p>
+Rittja Banik
+</p>
+
+</div>
+
+</a>
+
+<!-- STORY 8 -->
+<a href="story8.html" class="slide">
+
+<img src="story8cover.png">
+
+<div class="slide-overlay">
+
+<div class="story-tag">
+Pages of Pride: Colours of Courage
+</div>
+
+<h1>
+কালের গহ্বর থেকে রামধনু: এক কুইয়ার আখ্যান
+</h1>
+
+<p>
+দীপ্যমান ধর
+</p>
+
+</div>
+
+</a>
+
+<!-- STORY 9 -->
+<a href="story9.html" class="slide">
+
+<img src="story9cover.png">
+
+<div class="slide-overlay">
+
+<div class="story-tag">
+Pages of Pride: Colours of Courage
+</div>
+
+<h1>
+আমার হাত বান্ধিবি, পা বান্ধিবি, মন বান্ধিবি কেমনে?
+</h1>
+
+<p>
+শ্রুতি চক্রবর্তী
+</p>
+
+</div>
+
+</a>
+
+</div>
+
+<button class="slide-btn next">&#10095;</button>
+
+</section>
+
+<div class="footer">
+© 2026 NISHAAN | Study & Struggle
+<br><br>
+Created By SFI CALCUTTA UNIVERSITY
+<br><br>
+<!-- hitwebcounter Code START -->
+<a href="https://www.hitwebcounter.com/character-counter" target="_blank" rel="noopener" title="https://www.hitwebcounter.com/character-counter">
+<img src="https://www.hitwebcounter.com/counter/counter.php?page=21504365&amp;style=0026&amp;nbdigits=5&amp;type=page" alt="https://www.hitwebcounter.com/character-counter" decoding="async" style="border:0;max-width:100%;height:auto;" />
+</a>
+<br />
+<a href="https://www.hitwebcounter.com/" target="_blank" rel="noopener" style="font-family:Geneva, Arial, Helvetica;font-size:11px;color:#85948C;text-decoration:underline;font-weight:em;">Total-Visits</a>
+<!-- hitwebcounter Code END -->
+</div>
+
+<script>
+
+function openMenu() {
+    document.getElementById("menu").style.width = "80%";
+}
+
+function closeMenu() {
+    document.getElementById("menu").style.width = "0";
+}
+
+const slides = document.querySelectorAll(".slide");
+
+let current = 0;
+
+function showSlide(index) {
+    slides.forEach(slide => {
+        slide.classList.remove("active");
+    });
+
+    slides[index].classList.add("active");
+}
+
+function nextSlide() {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+}
+
+function prevSlide() {
+    current = (current - 1 + slides.length) % slides.length;
+    showSlide(current);
+}
+
+document.querySelector(".next").addEventListener("click", nextSlide);
+document.querySelector(".prev").addEventListener("click", prevSlide);
+
+setInterval(nextSlide, 5000);
+
+</script>
+
+
+</body>
+</html>
